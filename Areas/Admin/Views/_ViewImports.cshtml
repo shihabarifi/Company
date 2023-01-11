@@ -1,0 +1,10 @@
+﻿@using Company
+@using Company.ViewModel
+@using Company.Resource
+@using Microsoft.AspNetCore.Http
+@using Company.Models
+@using Microsoft.AspNetCore.Identity
+@using Company.IRepository;
+@inject UserManager<ApplicationUser> userManager
+@inject SignInManager<ApplicationUser> signInManager
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
