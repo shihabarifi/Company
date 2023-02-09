@@ -1,6 +1,7 @@
 using Company.Data;
-
+using Company.IRepository;
 using Company.Models;
+using Company.Repositories;
 using Company.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,8 @@ builder.Services.AddControllersWithViews();
 
 
 builder.Services.AddSession();
+builder.Services.AddScoped<IRepository<Service>, ServiceRepo>();
+builder.Services.AddScoped<IRepository<About>, AboutRepo>();
 builder.Services.AddDbContext<CompanyDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>

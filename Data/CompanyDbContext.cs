@@ -30,5 +30,7 @@ namespace Company.Data
         }
         
         public DbSet<VwUser> VwUsers { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<About> About { get; set; }
     }
 }

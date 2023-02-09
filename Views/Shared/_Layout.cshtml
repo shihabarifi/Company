@@ -1,148 +1,109 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
+
 <head>
-    <title>Course</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Course Project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="~/Web/styles/bootstrap4/bootstrap.min.css">
-    <link href="~/Web/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="~/Web/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="~/Web/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="~/Web/plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="~/Web/styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="~/Web/styles/responsive.css">
-    
-       <link rel="stylesheet" href="~/Admin/dist/css/adminlte.css">
+    <title>WEBUILD -  Construction Company Website Template Free</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="http://www.fontstatic.com/f=flat-jooza" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700&subset=arabic" rel="stylesheet">
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/Web/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Web/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="~/Web/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/Web/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/Web/css/style.css" rel="stylesheet">
 
 </head>
-<body>
 
-    <div class="super_container">
 
-        <!-- Header -->
-
-        <header class="header d-flex flex-row">
-            <div class="header_content d-flex flex-row align-items-center">
-                <!-- Logo -->
-                <div class="logo_container">
-                    <div class="logo">
-                        <img src="~/Web/images/logo.png" alt="">
-                        <span>course</span>
+<body style="font-family:'Cairo';">
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5">
+            <div class="col-lg-4 text-center py-3">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase fw-bold">Our Office</h6>
+                        <span>123 Street, New York, USA</span>
                     </div>
                 </div>
-
-                <!-- Main Navigation -->
-                <nav class="main_nav_container">
-                    <div class="main_nav">
-                        <ul class="main_nav_list">
-                            <li class="main_nav_item"><a href="#">home</a></li>
-                            <li class="main_nav_item"><a href="#">about us</a></li>
-                            <li class="main_nav_item"><a href="courses.html">courses</a></li>
-                            <li class="main_nav_item"><a href="elements.html">elements</a></li>
-                            <li class="main_nav_item"><a href="news.html">news</a></li>
-                            <li class="main_nav_item"><a href="contact.html">contact</a></li>
-                        </ul>
+            </div>
+            <div class="col-lg-4 text-center border-start border-end py-3">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase fw-bold">Email Us</h6>
+                        <span>info@example.com</span>
                     </div>
-                </nav>
-            </div>
-            <div class="header_side d-flex flex-row justify-content-center align-items-center">
-                <img src="~/Web/images/phone-call.svg" alt="">
-                <span>+43 4566 7788 2457</span>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="hamburger_container">
-                <i class="fas fa-bars trans_200"></i>
-            </div>
-
-        </header>
-
-        <!-- Menu -->
-        <div class="menu_container menu_mm">
-
-            <!-- Menu Close Button -->
-            <div class="menu_close_container">
-                <div class="menu_close"></div>
-            </div>
-
-            <!-- Menu Items -->
-            <div class="menu_inner menu_mm">
-                <div class="menu menu_mm">
-                    <ul class="menu_list menu_mm">
-                        <li class="menu_item menu_mm"><a href="#">Home</a></li>
-                        <li class="menu_item menu_mm"><a href="#">About us</a></li>
-                        <li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
-                        <li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
-                        <li class="menu_item menu_mm"><a href="news.html">News</a></li>
-                        <li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
-                    </ul>
-
-                    <!-- Menu Social -->
-
-                    <div class="menu_social_container menu_mm">
-                        <ul class="menu_social menu_mm">
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
                 </div>
-
             </div>
-
+            <div class="col-lg-4 text-center py-3">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase fw-bold">Call Us</h6>
+                        <span>+012 345 6789</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- Topbar End -->
 
-        <!-- Home -->
 
-        <div class="home">
-
-            <!-- Hero Slider -->
-            <div class="hero_slider_container">
-                <div class="hero_slider owl-carousel">
-
-                    <!-- Hero Slide -->
-                    <div class="hero_slide">
-                        <div class="hero_slide_background" style="background-image: url(Web/images/slider_background.jpg)"></div>
-                        <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                            <div class="hero_slide_content text-center">
-                                <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">للتجارة <span>البهلواي</span> مؤسسة!</h1>
-                            </div>
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
+        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>شركة النبيهي</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">الصفحة الرئيسية</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="project.html" class="dropdown-item">Our Project</a>
+                            <a href="team.html" class="dropdown-item">The Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div>
-
-                    <!-- Hero Slide -->
-                    <div class="hero_slide">
-                        <div class="hero_slide_background" style="background-image: url(Web/images/slider_background.jpg)"></div>
-                        <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                            <div class="hero_slide_content text-center">
-                                <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hero Slide -->
-                    <div class="hero_slide">
-                        <div class="hero_slide_background" style="background-image: url(Web/images/slider_background.jpg)"></div>
-                        <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                            <div class="hero_slide_content text-center">
-                                <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
-                            </div>
-                        </div>
-                    </div>
-
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a  href="" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a>
                 </div>
-
-                <div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">prev</span></div>
-                <div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">next</span></div>
             </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
 
-        </div>
 
         
         <div class="container-fluid">
@@ -151,154 +112,92 @@
 
         <!-- Footer -->
 
-        <footer class="footer">
-            <div class="container">
-
-                <!-- Newsletter -->
-
-                <div class="newsletter">
-                    <div class="row">
-                        <div class="col">
-                            <div class="section_title text-center">
-                                <h1>Subscribe to newsletter</h1>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <div class="newsletter_form_container mx-auto">
-                                <form action="post">
-                                    <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-                                        <input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                                        <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
+            <!-- Footer Start -->
+    <div class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
+        <div class="row g-5">
+            <div class="col-lg-6 pe-lg-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
+                </a>
+                <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
+                <p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
-
-                <!-- Footer Content -->
-
-                <div class="footer_content">
-                    <div class="row">
-
-                        <!-- Footer Column - About -->
-                        <div class="col-lg-3 footer_col">
-
-                            <!-- Logo -->
-                            <div class="logo_container">
-                                <div class="logo">
-                                    <img src="~/Web/images/logo.png" alt="">
-                                    <span>course</span>
-                                </div>
-                            </div>
-
-                            <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
-
-                        </div>
-
-                        <!-- Footer Column - Menu -->
-
-                        <div class="col-lg-3 footer_col">
-                            <div class="footer_column_title">Menu</div>
-                            <div class="footer_column_content">
-                                <ul>
-                                    <li class="footer_list_item"><a href="#">Home</a></li>
-                                    <li class="footer_list_item"><a href="#">About Us</a></li>
-                                    <li class="footer_list_item"><a href="courses.html">Courses</a></li>
-                                    <li class="footer_list_item"><a href="news.html">News</a></li>
-                                    <li class="footer_list_item"><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Footer Column - Usefull Links -->
-
-                        <div class="col-lg-3 footer_col">
-                            <div class="footer_column_title">Usefull Links</div>
-                            <div class="footer_column_content">
-                                <ul>
-                                    <li class="footer_list_item"><a href="#">Testimonials</a></li>
-                                    <li class="footer_list_item"><a href="#">FAQ</a></li>
-                                    <li class="footer_list_item"><a href="#">Community</a></li>
-                                    <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-                                    <li class="footer_list_item"><a href="#">Tuitions</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Footer Column - Contact -->
-
-                        <div class="col-lg-3 footer_col">
-                            <div class="footer_column_title">Contact</div>
-                            <div class="footer_column_content">
-                                <ul>
-                                    <li class="footer_contact_item">
-                                        <div class="footer_contact_icon">
-                                            <img src="~/Web/images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g">
-                                        </div>
-                                        Blvd Libertad, 34 m05200 Arévalo
-                                    </li>
-                                    <li class="footer_contact_item">
-                                        <div class="footer_contact_icon">
-                                            <img src="~/Web/images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g">
-                                        </div>
-                                        0034 37483 2445 322
-                                    </li>
-                                    <li class="footer_contact_item">
-                                        <div class="footer_contact_icon">
-                                            <img src="~/Web/images/envelope.svg" alt="https://www.flaticon.com/authors/lucy-g">
-                                        </div>hello@company.com
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Footer Copyright -->
-
-                <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
-                    <div class="footer_copyright">
-                        <span>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </span>
-                    </div>
-                    <div class="footer_social ml-sm-auto">
-                        <ul class="menu_social">
-                            <li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                            <li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
-        </footer>
-
+            <div class="col-lg-6 ps-lg-5">
+                <div class="row g-5">
+                    <div class="col-sm-6">
+                        <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4 class="text-white text-uppercase mb-4">Popular Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
+                        <div class="w-100">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-light" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="container-fluid bg-dark bg-light-radial text-white border-top border-primary px-0">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="py-4 px-5 text-center text-md-start">
+                <p class="mb-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+            </div>
+            <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
+                <p class="mb-0">Designed by <a class="text-dark" href="https://htmlcodex.com">HTML Codex</a></p>
+                <p class="mb-0">Distributed by <a class="text-dark" href="https://themewagon.com">ThemeWagon</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
-    <script src="~/Web/js/jquery-3.2.1.min.js"></script>
-    <script src="~/Web/styles/bootstrap4/popper.js"></script>
-    <script src="~/Web/styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="~/Web/plugins/greensock/TweenMax.min.js"></script>
-    <script src="~/Web/plugins/greensock/TimelineMax.min.js"></script>
-    <script src="~/Web/plugins/scrollmagic/ScrollMagic.min.js"></script>
-    <script src="~/Web/plugins/greensock/animation.gsap.min.js"></script>
-    <script src="~/Web/plugins/greensock/ScrollToPlugin.min.js"></script>
-    <script src="~/Web/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="~/Web/plugins/scrollTo/jquery.scrollTo.min.js"></script>
-    <script src="~/Web/plugins/easing/easing.js"></script>
-    <script src="~/Web/js/custom.js"></script>
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Web/lib/easing/easing.min.js"></script>
+    <script src="~/Web/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/Web/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Web/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="~/Web/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="~/Web/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/Web/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Web/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/Web/js/main.js"></script>
+
+
 
 </body>
 </html>

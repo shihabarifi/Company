@@ -1,0 +1,264 @@
+﻿@model ServiceVM
+@{
+    ViewData["Title"] = "Registers";
+}
+    <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="~/Admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                     style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    @if(signInManager.IsSignedIn(User))
+                    {
+
+                    <div class="image">
+                        <img src="@Helper.PathImageuser@((await userManager.GetUserAsync(User)).ImageUser)" class="img-circle elevation-2" alt="User Image">
+                    </div>
+
+                    <div class="info">
+                        <a href="#" class="d-block">@((await userManager.GetUserAsync(User)).Name)</a>
+
+                        <form asp-action="Logout" asp-controller="Accounts" method="post">
+                            <input  type="submit" value="تسجيل الخروج" style="border:none; color:orange;background-color:#343a40">
+                        </form>
+                    </div>
+                     }
+
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="/" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/Admin/Accounts/Roles" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>@ResourceWeb.lbRoles</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Admin/Accounts/Registers" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>@ResourceWeb.lbRegisters</p>
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a href="/Admin/Service/Index" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>الخدمات</p>
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a href="/Admin/About/Index" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>من نحن</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+<div class="wrapper">
+    <!--Content-Header-->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">الخدمات</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/Admin/Home/Index">@ResourceWeb.lbHomePage</a></li>
+                        <li class="breadcrumb-item active">@ResourceWeb.lbManageBook</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--End Content-Header-->
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center justify-content-start">
+                            <h3 class="card-title" style="margin-left:20px">الخدمات الحالية</h3>
+                            <div class="card-tools ">
+                                <!-- Button trigger modal -->
+                                <button type="button" style="margin-top:-5px" 
+                                class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" asp-action="Create" onclick="Rest()">
+                                    إضافة خدمة جديدة
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="tableRole" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <td style="width:30%">الخدمة</td>
+                                        <td style="width:30%">الصورة</td>
+                                        <td style="width:40%">الوصف</td>
+                                      
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Services)
+                                   {
+                                       <tr>
+                                           <td>@item.Title</td>
+                                             
+                                           <td><img src="~/Images/@item.ImageUrl" class="img-bordered img-circle img-circle"
+                                           style="width:70px; height:70px"></td>
+                                       
+                                       <td>@item.Descrption</td>
+                                      
+                                       </tr>
+                                   }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog card card-success card-outline">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >اضف خدمة جديدة</h5>
+                    <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</a>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="Create" asp-controller="Service" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            
+                            <input type="text" hidden class="form-control" asp-for="@Model.Services.FirstOrDefault().ImageUrl" id="imgeHide" />
+                            <label  class="control-lable">العنوان</label>
+                            <input type="text" class="form-control" asp-for="@Model.Services.FirstOrDefault().Title" value="" id="userName" />
+                            <span asp-validation-for="@Model.Services.FirstOrDefault().Title" value="" class="text-danger"></span>
+                        </div>
+                         <div class="form-group">
+                            <label class="control-lable">الوصف</label>
+                            <input type="text" class="form-control" asp-for="@Model.Services.FirstOrDefault().Descrption" value="" id="userEmail" />
+                            <span asp-validation-for="@Model.Services.FirstOrDefault().Descrption" value="" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <img src="" class="img-circle"
+                            style="width:35px;height:35px" hidden id="image"/>
+                        </div>
+                         <div class="form-group">
+                            <label  class="control-lable">صورةالخبر</label>
+                            <input type="file" class="form-control" value="" asp-for="@Model.Services.FirstOrDefault().ImageUrl" id="userImage" />
+                            
+                        </div>
+                       
+                       
+                        <div class="modal-footer-rtl" style="padding:0 15px 15px 0">
+                            <input type="submit" class="btn btn-success" value="@ResourceWeb.lbbtnSave" id="btnSave" />
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+
+    @section Scripts{
+        @if (!string.IsNullOrEmpty(Context.Session.GetString(Helper.MsgType)))
+        {
+        if (Context.Session.GetString(Helper.MsgType) == Helper.Success)
+            {
+                <script>
+
+            Swal.fire({
+                title: '@Context.Session.GetString(Helper.Title)',
+                    text: '@Html.Raw(@Context.Session.GetString(Helper.Msg))',
+                    confirmButtonText: '@ResourceWeb.lbOk',
+                icon: 'success'
+            });
+                </script>
+
+            }
+            else
+            {
+                <script>
+
+             Swal.fire({
+                    title: '@Context.Session.GetString(Helper.Title)',
+                    text: '@Html.Raw(@Context.Session.GetString(Helper.Msg))',
+                    confirmButtonText: '@ResourceWeb.lbOk',
+                 icon: 'error'
+             });
+                </script>
+            }
+            Context.Session.SetString(Helper.MsgType, "");
+        }
+
+        <script src="~/Modules/Registers.js"></script>
+
+    <script>
+
+        let lbTitleEdit = '@Html.Raw(ResourceWeb.lbTitleEdit)';
+        let lbEdit = '@Html.Raw(ResourceWeb.lbEdit)';
+        let lbAddNewRole = '@Html.Raw(ResourceWeb.lbAddNewRegister)';
+        let lbbtnSave = '@Html.Raw(ResourceWeb.lbbtnSave)';
+
+        let lbTitleMsgDelete = '@Html.Raw(ResourceWeb.lbbtnSave)';
+        let lbTextMsgDelete = '@Html.Raw(ResourceWeb.lbTextMsgDelete)';
+        let lbconfirmButtonText = '@Html.Raw(ResourceWeb.lbconfirmButtonText)';
+        let lbcancelButtonText = '@Html.Raw(ResourceWeb.lbcancelButtonText)';
+
+        let lbTitleDeletedOk = '@Html.Raw(ResourceWeb.lbTitleDeletedOk)';
+        let lbMsgDeletedOkRegister = '@Html.Raw(ResourceWeb.lbMsgDeletedOkRegister)';
+        let lbSuccess = '@Html.Raw(Helper.Success)';
+        let PathImageuser = '@Html.Raw(Helper.PathImageuser)';
+
+    </script>
+    }
+
+
+
